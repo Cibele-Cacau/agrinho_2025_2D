@@ -126,3 +126,40 @@ footer {
   text-align: center;
   padding: 20px;
 }
+/* Estilos personalizados para o banner e fontes */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fcf8; /* Um fundo verde muito claro para o corpo, remetendo ao campo */
+}
+.banner-ribbon {
+    position: relative;
+    background-color: #6b8e23; /* Cor verde oliva para o banner, remetendo ao campo */
+    color: white;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-radius: 0.75rem; /* Cantos arredondados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-top: 2rem;
+    display: inline-block; /* Para o banner se ajustar ao conteúdo */
+}
+.banner-ribbon::before,
+.banner-ribbon::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+.banner-ribbon::before {
+    left: -1.5rem;
+    border-width: 1.5rem 1.5rem 1.5rem 0;
+    border-color: transparent #6b8e23 transparent transparent;
+}
+.banner-ribbon::after {
+    right: -1.5rem;
+    border-width: 1.5rem 0 1.5rem 1.5rem;
+    border-color: transparent transparent transparent #6b8e23;
+}
